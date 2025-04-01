@@ -64,6 +64,9 @@
         }
     },
     "require-dev": {
-        "saldanhakun/development-bundle": "^1.0"
+        "saldanhakun/development-bundle": "^1.0",
+        "symfony/runtime": "7.2.*",
+        "symfony/yaml": "7.2.*",
+        "symfony/flex": "^2.5"
     }
 }

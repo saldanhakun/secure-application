@@ -14,36 +14,27 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": "^8.2",
-        "ext-ctype": "*",
-        "ext-iconv": "*",
+        "hwi/oauth-bundle": "^2.3",
+        "rollerworks/password-strength-bundle": "^3.0",
+        "scheb/2fa-backup-code": "^7.7",
+        "scheb/2fa-bundle": "^7.7",
+        "scheb/2fa-email": "^7.7",
+        "scheb/2fa-google-authenticator": "^7.7",
+        "scheb/2fa-totp": "^7.7",
+        "symfony/form": "^7",
+        "symfony/mailer": "^7",
+        "symfony/rate-limiter": "^7.2",
+        "symfony/security-bundle": "^7",
         "doctrine/dbal": "^3",
-        "doctrine/doctrine-bundle": "^2.14",
-        "doctrine/orm": "^3.3",
-        "phpdocumentor/reflection-docblock": "^5.6",
-        "phpstan/phpdoc-parser": "^2.1",
-        "symfony/console": "7.2.*",
-        "symfony/form": "7.2.*",
-        "symfony/framework-bundle": "7.2.*",
-        "symfony/http-client": "7.2.*",
-        "symfony/intl": "7.2.*",
-        "symfony/mailer": "7.2.*",
-        "symfony/mime": "7.2.*",
-        "symfony/monolog-bundle": "^3.0",
-        "symfony/notifier": "7.2.*",
-        "symfony/security-bundle": "7.2.*",
-        "symfony/serializer": "7.2.*",
-        "symfony/string": "7.2.*",
-        "symfony/translation": "7.2.*",
-        "symfony/twig-bundle": "7.2.*",
-        "symfony/validator": "7.2.*",
-        "symfony/yaml": "7.2.*",
-        "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "doctrine/doctrine-bundle": "^2",
+        "doctrine/doctrine-migrations-bundle": "^3",
+        "doctrine/orm": "^3"
     },
-    "require-dev": {
-        "phpunit/phpunit": "^9.5",
-        "symfony/phpunit-bridge": "^7.2"
+    "suggest": {
+        "symfony/brevo-mailer": "Permite usar o Brevo (pago/grátis) para enviar mensagens transacionais",
+        "symfony/sendgrid-mailer": "Permite usar o Sendgrid (pago/grátis) para enviar mensagens transacionais",
+        "symfony/mailtrap": "Permite usar o Mailtrap (pago/grátis) para criar uma gaiola de e-mails (para testes)",
+        "symfonycasts/verify-email-bundle": "Favorece a verificação de e-mails para liberação de novos usuários"
     },
     "config": {
         "allow-plugins": {
@@ -63,10 +54,16 @@
             "Saldanhakun\\SecureApplication\\Tests\\": "tests/"
         }
     },
+    "conflict": {
+        "doctrine/dbal": "^4.0"
+    },
     "extra": {
         "symfony": {
             "allow-contrib": false,
             "require": "7.2.*"
         }
+    },
+    "require-dev": {
+        "saldanhakun/development-bundle": "^1.0"
     }
 }
